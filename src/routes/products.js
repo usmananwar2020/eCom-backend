@@ -6,6 +6,6 @@ import roleAdmin from '../middleware/roleAdmin.js';
 
 const router = express.Router()
 
-router.post('/add', [auth, roleAdmin], productValidation,  addProduct);
+router.post('/', [auth, roleAdmin], productValidation,  addProduct);
 
 export default router;
