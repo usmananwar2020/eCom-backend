@@ -22,6 +22,9 @@ export const productsCount = async () => {
     return count;
 }
 export const getProductId = async (req) => {
-    const product = Products.findOne({_id: req.params.id});
+    const product = Products.findOne({ _id: req.params.id });
     return product;
+}
+export const updateProductById = (req) => {
+    return Products.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true });
 }
